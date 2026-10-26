@@ -1,0 +1,16 @@
+{
+  "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+  "deck_manifest": "/workspace/ppt-faithful/20261026-090322-source/deck_manifest.json",
+  "expected_pages": 1,
+  "slides": 1,
+  "page_manifests_missing": [],
+  "page_validation_missing": [],
+  "failed_page_validations": [],
+  "page_contract_violations": [],
+  "notes_expected": 0,
+  "notes_found": 0,
+  "notes_hash_mismatches": [],
+  "missing_parts": [],
+  "warnings": [],
+  "passed": true
+}

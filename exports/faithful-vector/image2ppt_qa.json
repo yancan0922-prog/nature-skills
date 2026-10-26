@@ -1,0 +1,291 @@
+{
+  "schema_version": "image2ppt-supplemental-final-qa-v1",
+  "passed": true,
+  "state_owner": "page_jobs.json",
+  "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+  "manifests": [
+    "/workspace/ppt-faithful/20261026-090322-source/pages/page_001/manifest.json"
+  ],
+  "visual_review": {
+    "status": "reviewed",
+    "notes": "",
+    "evidence": "/workspace/ppt-faithful/20261026-090322-source/final/visual-review-evidence.json",
+    "evidence_template": "/workspace/ppt-faithful/20261026-090322-source/final/visual-review-evidence.template.json",
+    "evidence_payload": {
+      "schema_version": "image2ppt-visual-review-evidence-v1",
+      "pages": [
+        {
+          "page_id": "page_001",
+          "source": "/workspace/ppt-faithful/20261026-090322-source/pages/page_001/source.png",
+          "rendered": "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render/slide_01.png",
+          "source_sha256": "3537cf403d641d9c733748a5ba3752fb3e3bccf43e797342dc55d57384baa0d6",
+          "rendered_sha256": "b531e3df7daa61ec2e3af8790e8ff4d40bcd0d0b9a4a99e537a4f943c5c6da5a",
+          "reviewed": true,
+          "checks": {
+            "composition_layout": "Compared actual LibreOffice render to source: four stages, three vessels, left stack and four circular magnifications occupy the original positions without template relayout.",
+            "text_content": "Source contains no readable text or formulas; no new labels or chemical names were added.",
+            "object_completeness": "Source-derived multicolor contours retain molecular stacks, separated sheets, purple ions, water, probe, blue waves, glass boundaries, shadows and illustrated gradient arrows. Fine contours and soft gradients retain visible vector tracing differences.",
+            "render_integrity": "Actual PPT render contains 21066 native filled contour shapes with zero picture objects; source is not embedded. Gloss and soft shadow transitions are approximated by discrete layered colors, with local edge simplification when enlarged."
+          }
+        }
+      ]
+    }
+  },
+  "checks": {
+    "region_decomposition_command": {
+      "command": [
+        "/workspace/.nature-skills-setup/venv/bin/python",
+        "/workspace/nature-skills/skills/nature-image2ppt/scripts/inspect_region_decomposition.py",
+        "--run",
+        "/workspace/ppt-faithful/20261026-090322-source",
+        "--out",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_region_decomposition.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": \"image2ppt-region-decomposition-report-v1\",\n  \"passed\": true,\n  \"pages\": [\n    {\n      \"manifest\": \"/workspace/ppt-faithful/20261026-090322-source/pages/page_001/manifest.json\",\n      \"passed\": true,\n      \"page_complexity\": \"structured\",\n      \"region_count\": 5,\n      \"regions\": [\n        {\n          \"id\": \"zone0\",\n          \"strategy\": \"native-object-decomposition\",\n          \"risk_level\": \"medium\",\n          \"manifest_object_count\": 5438,\n          \"protected_anchor_count\": 0,\n          \"compound_diagram\": false,\n          \"passed\": true,\n          \"errors\": []\n        },\n        {\n          \"id\": \"zone1\",\n          \"strategy\": \"native-object-decomposition\",\n          \"risk_level\": \"medium\",\n          \"manifest_object_count\": 6714,\n          \"protected_anchor_count\": 0,\n          \"compound_diagram\": false,\n          \"passed\": true,\n          \"errors\": []\n        },\n        {\n          \"id\": \"zone2\",\n          \"strategy\": \"native-object-decomposition\",\n          \"risk_level\": \"medium\",\n          \"manifest_object_count\": 5262,\n          \"protected_anchor_count\": 0,\n          \"compound_diagram\": false,\n          \"passed\": true,\n          \"errors\": []\n        },\n        {\n          \"id\": \"zone3\",\n          \"strategy\": \"native-object-decomposition\",\n          \"risk_level\": \"medium\",\n          \"manifest_object_count\": 3651,\n          \"protected_anchor_count\": 0,\n          \"compound_diagram\": false,\n          \"passed\": true,\n          \"errors\": []\n        },\n        {\n          \"id\": \"zone4\",\n          \"strategy\": \"native-object-decomposition\",\n          \"risk_level\": \"medium\",\n          \"manifest_object_count\": 1,\n          \"protected_anchor_count\": 0,\n          \"compound_diagram\": false,\n          \"passed\": true,\n          \"errors\": []\n        }\n      ],\n      \"summary\": {\n        \"manifest_objects\": 21066,\n        \"assigned_objects\": 21066,\n        \"protected_anchors\": 0,\n        \"compound_regions\": 0\n      },\n      \"warnings\": [],\n      \"errors\": []\n    }\n  ],\n  \"summary\": {\n    \"pages\": 1,\n    \"regions\": 5,\n    \"compound_regions\": 0\n  },\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    "region_decomposition": {
+      "schema_version": "image2ppt-region-decomposition-report-v1",
+      "passed": true,
+      "pages": [
+        {
+          "manifest": "/workspace/ppt-faithful/20261026-090322-source/pages/page_001/manifest.json",
+          "passed": true,
+          "page_complexity": "structured",
+          "region_count": 5,
+          "regions": [
+            {
+              "id": "zone0",
+              "strategy": "native-object-decomposition",
+              "risk_level": "medium",
+              "manifest_object_count": 5438,
+              "protected_anchor_count": 0,
+              "compound_diagram": false,
+              "passed": true,
+              "errors": []
+            },
+            {
+              "id": "zone1",
+              "strategy": "native-object-decomposition",
+              "risk_level": "medium",
+              "manifest_object_count": 6714,
+              "protected_anchor_count": 0,
+              "compound_diagram": false,
+              "passed": true,
+              "errors": []
+            },
+            {
+              "id": "zone2",
+              "strategy": "native-object-decomposition",
+              "risk_level": "medium",
+              "manifest_object_count": 5262,
+              "protected_anchor_count": 0,
+              "compound_diagram": false,
+              "passed": true,
+              "errors": []
+            },
+            {
+              "id": "zone3",
+              "strategy": "native-object-decomposition",
+              "risk_level": "medium",
+              "manifest_object_count": 3651,
+              "protected_anchor_count": 0,
+              "compound_diagram": false,
+              "passed": true,
+              "errors": []
+            },
+            {
+              "id": "zone4",
+              "strategy": "native-object-decomposition",
+              "risk_level": "medium",
+              "manifest_object_count": 1,
+              "protected_anchor_count": 0,
+              "compound_diagram": false,
+              "passed": true,
+              "errors": []
+            }
+          ],
+          "summary": {
+            "manifest_objects": 21066,
+            "assigned_objects": 21066,
+            "protected_anchors": 0,
+            "compound_regions": 0
+          },
+          "warnings": [],
+          "errors": []
+        }
+      ],
+      "summary": {
+        "pages": 1,
+        "regions": 5,
+        "compound_regions": 0
+      },
+      "errors": []
+    },
+    "postprocess_command": {
+      "command": [
+        "/workspace/.nature-skills-setup/venv/bin/python",
+        "/workspace/nature-skills/skills/nature-image2ppt/scripts/postprocess_manifest_arrows.py",
+        "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+        "--run",
+        "/workspace/ppt-faithful/20261026-090322-source",
+        "--report",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_arrow_postprocess.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": \"image2ppt-manifest-arrow-postprocess-v1\",\n  \"passed\": true,\n  \"pptx\": \"/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx\",\n  \"manifests\": [\n    \"/workspace/ppt-faithful/20261026-090322-source/pages/page_001/manifest.json\"\n  ],\n  \"operations\": [],\n  \"errors\": [],\n  \"preservation\": {\n    \"non_slide_parts_preserved\": true,\n    \"non_slide_part_count\": 12,\n    \"notes_parts_preserved\": true,\n    \"notes_part_count\": 0\n  },\n  \"input_sha256\": \"5b3c6aa03e4f4e312a1c72a4359dd0d82f515a5e73b56b44826136cab89ae3e9\",\n  \"output_sha256\": \"5b3c6aa03e4f4e312a1c72a4359dd0d82f515a5e73b56b44826136cab89ae3e9\",\n  \"summary\": {\n    \"slides\": 1,\n    \"profiled_arrows\": 0,\n    \"connectors\": 0,\n    \"filled_arrows\": 0\n  }\n}\n",
+      "stderr": ""
+    },
+    "postprocess": {
+      "schema_version": "image2ppt-manifest-arrow-postprocess-v1",
+      "passed": true,
+      "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+      "manifests": [
+        "/workspace/ppt-faithful/20261026-090322-source/pages/page_001/manifest.json"
+      ],
+      "operations": [],
+      "errors": [],
+      "preservation": {
+        "non_slide_parts_preserved": true,
+        "non_slide_part_count": 12,
+        "notes_parts_preserved": true,
+        "notes_part_count": 0
+      },
+      "input_sha256": "5b3c6aa03e4f4e312a1c72a4359dd0d82f515a5e73b56b44826136cab89ae3e9",
+      "output_sha256": "5b3c6aa03e4f4e312a1c72a4359dd0d82f515a5e73b56b44826136cab89ae3e9",
+      "summary": {
+        "slides": 1,
+        "profiled_arrows": 0,
+        "connectors": 0,
+        "filled_arrows": 0
+      }
+    },
+    "image2ppt_validation_command": {
+      "command": [
+        "/workspace/.nature-skills-setup/venv/bin/python",
+        "/workspace/nature-skills/skills/nature-image2ppt/cli/image2ppt/runtime/validate_pptx.py",
+        "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+        "--deck-manifest",
+        "/workspace/ppt-faithful/20261026-090322-source/deck_manifest.json",
+        "--report",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_structural_validation.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"pptx\": \"/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx\",\n  \"deck_manifest\": \"/workspace/ppt-faithful/20261026-090322-source/deck_manifest.json\",\n  \"expected_pages\": 1,\n  \"slides\": 1,\n  \"page_manifests_missing\": [],\n  \"page_validation_missing\": [],\n  \"failed_page_validations\": [],\n  \"page_contract_violations\": [],\n  \"notes_expected\": 0,\n  \"notes_found\": 0,\n  \"notes_hash_mismatches\": [],\n  \"missing_parts\": [],\n  \"warnings\": [],\n  \"passed\": true\n}\n",
+      "stderr": ""
+    },
+    "image2ppt_validation": {
+      "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+      "deck_manifest": "/workspace/ppt-faithful/20261026-090322-source/deck_manifest.json",
+      "expected_pages": 1,
+      "slides": 1,
+      "page_manifests_missing": [],
+      "page_validation_missing": [],
+      "failed_page_validations": [],
+      "page_contract_violations": [],
+      "notes_expected": 0,
+      "notes_found": 0,
+      "notes_hash_mismatches": [],
+      "missing_parts": [],
+      "warnings": [],
+      "passed": true
+    },
+    "arrow_inspection_command": {
+      "command": [
+        "/workspace/.nature-skills-setup/venv/bin/python",
+        "/workspace/nature-skills/skills/nature-image2ppt/scripts/inspect_arrow_atomicity.py",
+        "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+        "--run",
+        "/workspace/ppt-faithful/20261026-090322-source",
+        "--out",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_arrow_inspection.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": \"image2ppt-manifest-arrow-inspection-v1\",\n  \"passed\": true,\n  \"pptx\": \"/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx\",\n  \"errors\": [],\n  \"summary\": {\n    \"expected_arrows\": 0,\n    \"inspected_arrows\": 0,\n    \"connectors\": 0,\n    \"filled_arrows\": 0,\n    \"fragmented_or_missing\": 0\n  },\n  \"arrows\": []\n}\n",
+      "stderr": ""
+    },
+    "arrow_inspection": {
+      "schema_version": "image2ppt-manifest-arrow-inspection-v1",
+      "passed": true,
+      "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+      "errors": [],
+      "summary": {
+        "expected_arrows": 0,
+        "inspected_arrows": 0,
+        "connectors": 0,
+        "filled_arrows": 0,
+        "fragmented_or_missing": 0
+      },
+      "arrows": []
+    },
+    "render_command": {
+      "command": [
+        "/workspace/.nature-skills-setup/venv/bin/python",
+        "/workspace/nature-skills/skills/nature-image2ppt/scripts/render_image2ppt_qa.py",
+        "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+        "--out-dir",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render",
+        "--report",
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render_report.json",
+        "--timeout",
+        "180"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"rendered\", \"report\": \"/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render_report.json\"}\n",
+      "stderr": ""
+    },
+    "render": {
+      "schema_version": "image2ppt-render-qa-v1",
+      "status": "rendered",
+      "renderer": "libreoffice",
+      "pptx": "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx",
+      "out_dir": "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render",
+      "rendered_png": null,
+      "rendered_slides": [
+        "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render/slide_01.png"
+      ],
+      "source_image": null,
+      "raw": {
+        "status": "rendered",
+        "renderer": "libreoffice",
+        "backend": "soffice-pdf-pdfium",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+          "--headless",
+          "-env:UserInstallation=file:///tmp/image2ppt-libreoffice-y5z4n58w/profile",
+          "--convert-to",
+          "pdf",
+          "--outdir",
+          "/tmp/image2ppt-libreoffice-y5z4n58w",
+          "/workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx"
+        ],
+        "stdout": "convert /workspace/ppt-faithful/20261026-090322-source/final/source_edited.pptx as a Impress document -> /tmp/image2ppt-libreoffice-y5z4n58w/source_edited.pdf using filter : impress_pdf_Export\n",
+        "stderr": "Fontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n",
+        "elapsed_seconds": 41.962,
+        "slides": [
+          "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render/slide_01.png"
+        ]
+      }
+    },
+    "page_diff_metrics": [
+      {
+        "page_index": 1,
+        "source_png": "/workspace/ppt-faithful/20261026-090322-source/pages/page_001/source.png",
+        "rendered_png": "/workspace/ppt-faithful/20261026-090322-source/final/image2ppt_render/slide_01.png",
+        "source_size": [
+          1672,
+          941
+        ],
+        "rendered_original_size": [
+          2000,
+          1125
+        ],
+        "mean_abs_rgb_diff_0_255": 5.32,
+        "max_abs_rgb_diff_0_255": 205,
+        "note": "Indicative only; the page still requires visual review."
+      }
+    ]
+  },
+  "errors": []
+}
